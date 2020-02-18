@@ -7,7 +7,8 @@ export default function route(app:INestApplication) {
   app.setGlobalPrefix('api');
 
   // /apiから始まらないURLの場合はクライアントサイドのルーティングを適用
-  const clientPath = __dirname + '/../../front/dist';
+  const clientPath = __dirname + '/../public';
+  console.log(clientPath);
   app.use(express.static(clientPath));
 
   // Swaggerを/api/docにて使用する

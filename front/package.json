@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host $IP --disable-host-check",
-    "build": "ng build",
+    "build": "ng build --output-path=../back/public/html --base-href=/html/ && mv ../back/public/html/index.html ../back/public",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
